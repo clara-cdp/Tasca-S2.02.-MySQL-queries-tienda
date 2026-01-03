@@ -2,18 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 15 correctas de 42 queries
+✅ 16 correctas de 42 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -32,26 +32,16 @@
 
 ---
 
-## ❌ Query 5: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--nom del producte | euros | dòlars
-+nombre | precio_eur | precio_usd
- Disco duro SATA3 1TB | 86.99 | 95.69
- Memoria RAM DDR4 8GB | 120.00 | 132.00
- Disco SSD 1 TB | 150.99 | 166.09
-```
+## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -65,7 +55,7 @@
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -77,7 +67,7 @@ FROM producto' at line 4
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -91,7 +81,7 @@ FROM producto' at line 4
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.28 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -105,14 +95,14 @@ FROM producto' at line 4
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -142,31 +132,15 @@ FROM producto' at line 4
 +Disco duro SATA3 1TB | 86.99
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 17: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,3 +1,6 @@
- codigo | nombre
-+1.00 | Asus
-+2.00 | Lenovo
-+3.00 | Hewlett-Packard
- 4.00 | Samsung
- 5.00 | Seagate
-```
+## ❌ Query 17: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM fabricante
+LIMIT 5' at line 3
 
-⏱ Tiempo: 0.27 ms
-🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
-
----
 
 ## ❌ Query 18: Incorrecto
 ```diff
@@ -180,11 +154,8 @@ FROM producto' at line 4
 +5.00 | Seagate
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
 
 ---
 
@@ -198,7 +169,7 @@ FROM producto' at line 4
 +Impresora HP Deskjet 3720 | 59.99
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -215,7 +186,7 @@ FROM producto' at line 4
 +GeForce GTX 1080 Xtreme | 755.00
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -242,7 +213,7 @@ FROM producto' at line 4
 +Portátil Ideapd 320
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -274,8 +245,8 @@ FROM producto' at line 4
 -Disco duro SATA3 1TB | 86.99 | Seagate
 ```
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -310,8 +281,8 @@ FROM producto' at line 4
 +Disco duro SATA3 1TB | 86.99 | Seagate
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.33 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -335,22 +306,22 @@ JOIN fabricante f
  GeForce GTX 1080 Xtreme | 755.00 | Crucial
 ```
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.33 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 26: Correcto
 
-⏱ Tiempo: 0.31 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.32 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
 ## ✅ Query 27: Correcto
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.34 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -366,8 +337,8 @@ JOIN fabricante f
  Monitor 27 LED Full HD | 245.99 | Asus
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.33 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -384,7 +355,7 @@ JOIN fabricante f
 ```
 
 ⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -399,8 +370,8 @@ JOIN fabricante f
  GeForce GTX 1050Ti | 185.00 | Gigabyte
 ```
 
-⏱ Tiempo: 0.37 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -415,8 +386,8 @@ JOIN fabricante f
  Impresora HP Laserjet Pro M26nw | 180.00 | Hewlett-Packard
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.33 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -443,7 +414,7 @@ JOIN fabricante f
 ```
 
 ⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -471,7 +442,7 @@ JOIN fabricante f
 ```
 
 ⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -504,8 +475,8 @@ JOIN fabricante f
 +7.00 | Gigabyte
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -533,7 +504,7 @@ JOIN fabricante f
 +9.00 | Xiaomi | NULL
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -551,7 +522,7 @@ JOIN fabricante f
 +Xiaomi
 ```
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -568,8 +539,8 @@ JOIN fabricante f
 +9.00 | Portátil Ideapd 320 | Lenovo | 2.00
 ```
 
-⏱ Tiempo: 0.32 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.31 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 ---
 
@@ -584,8 +555,8 @@ JOIN fabricante f
 +8.00 | Portátil Yoga 520 | 559.00 | 2.00
 ```
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 🚨 **Problemas detectados:**
 ⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
@@ -611,8 +582,8 @@ JOIN fabricante f
 +8.00 | Portátil Yoga 520 | 559.00 | 2.00
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, codigo_fabricante
 
 🚨 **Problemas detectados:**
 ⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
