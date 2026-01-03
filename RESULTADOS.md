@@ -6,14 +6,14 @@
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -30,7 +30,7 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -47,7 +47,7 @@
  Disco SSD 1 TB | 150.99 | 166.09
 ```
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -58,13 +58,13 @@
 +++ 
 @@ -1,4 +1,4 @@
 -nombre | precio
-+UPPER(nombre) | precio
++UPPER(p.nombre) | precio
  DISCO DURO SATA3 1TB | 86.99
  MEMORIA RAM DDR4 8GB | 120.00
  DISCO SSD 1 TB | 150.99
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -81,7 +81,7 @@
  disco ssd 1 tb | 150.99
 ```
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
