@@ -17,19 +17,19 @@ FROM producto;
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
  SELECT 
 	nombre, 
-	precio AS 'precio_eur', 
-	ROUND(precio*1.1, 2) AS 'precio_usd'
+	precio AS precio_eur, 
+	ROUND(precio*1.1, 2) AS precio_usd
 FROM producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
 SELECT 
-	UPPER(nombre), 
+	UPPER(nombre) AS nombre, 
 	precio
 FROM producto;
 
 -- 7. Llista els noms (nombre) i els preus (precio) dels productes de la taula producto, convertint els noms a minúscula.
 SELECT 
-	LOWER(nombre), 
+	LOWER(nombre) AS nombre, 
 	precio
 FROM producto;
 
@@ -42,7 +42,7 @@ FROM fabricante;
 -- 9. Llista els noms i els preus dels productes, arrodonint el valor del preu (precio)
 SELECT 
 	nombre, 
-	FORMAT(FLOOR(precio),2) AS precio
+	ROUND(precio),2) AS precio
 FROM producto;
 
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
