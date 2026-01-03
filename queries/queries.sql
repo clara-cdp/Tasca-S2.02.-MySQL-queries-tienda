@@ -16,9 +16,9 @@ FROM producto;
 
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
 SELECT 
-	nombre, 
-	precio AS precio_eur, 
-	ROUND(precio*1.1, 2) AS precio_usd
+	nombre AS 'nom del producte', 
+	precio AS euros, 
+	ROUND(precio*1.1, 2) AS 'dòlars'
 FROM producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
@@ -48,7 +48,7 @@ FROM producto;
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 SELECT 
     nombre, 
-    FORMAT(TRUNCATE(precio,0),2) AS 'precio truncado'
+    TRUNCATE(precio,0) AS 'precio truncado'
 FROM producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
@@ -87,12 +87,12 @@ FROM producto
 ORDER BY nombre DESC;
 
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
-SELECT *
+SELECT codigo, nombre, 
 FROM fabricante
 LIMIT 5;
 
 -- 17. Retorna una llista amb 2 files a partir de la quarta fila de la taula fabricante. La quarta fila també s'ha d'incloure en la resposta.
-SELECT *
+SELECT codigo, nombre
 FROM fabricante
 LIMIT 3, 2;
 
