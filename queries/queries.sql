@@ -80,12 +80,6 @@ SELECT
 FROM producto
 ORDER BY nombre ASC;
 
-SELECT 
-    nombre,
-    precio
-FROM producto
-ORDER BY nombre DESC;
-
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
 SELECT codigo, nombre
 FROM fabricante
